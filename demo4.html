@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数扩展</title>
+</head>
+
+<body>
+    <script>
+        function fn1(x, y) {
+            console.log(x + y);
+        }
+        // fn1(10,30);
+        //    fn1(20,30,10);
+
+        function fn2(name = "小明", age = 0) {
+            console.log(name + "今年" + age + "岁了");
+        }
+        // fn2("Jack",20);
+        //    fn2(undefined,30);
+        //    fn2();
+
+
+        //rest参数
+        function fn3(...value) {
+            //    console.log(value);
+            var sum = 0;
+            value.forEach(function (item) {
+                sum += item;
+            });
+            console.log(sum);
+        }
+        //     fn3(10,20);
+        //     fn3(10,200,300,600);
+        //     fn3(45,10,20,30,22,23);
+
+        function fn(name, ...a) {
+            console.log(name, a);
+        }
+        //   fn3("jack",10,20,30);
+
+        function fn4({
+            name = "小红",
+            age = 0
+        } = {}) {
+            console.log(name, age);
+        }
+        // fn4({name:"jack",age:50});
+        // fn4({});
+        // fn4();
+
+        function fn5() {
+            console.log(arguments.callee);
+            // arguments.callee();  //fn5()   递归函数
+        }
+        // fn5();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // const arr=[50,20,30];
+    // let sum=0;
+    // arr.forEach((item)=>{
+    //     sum+=item;
+    // });
+    // // console.log(sum);
+
+    // arr.sort((a,b)=>a-b);  //升序排序
+    // console.log(arr);
+
+// //es5  this  调用者
+        // let obj = {
+        //     sName: '小白',
+        //     age: 22,
+        //     say: function () {
+        //         console.log(this); //当前对象  obj
+        //         let _this = this;
+        //         setTimeout(function () {  //是window的一个内置方法，所以调用者是widow对象
+        //             // console.log(this);// window
+        //             console.log(_this);  //obj
+        //         }, 500);
+        //     }
+        // };
+
+    let obj = {
+            sName: '小白',
+            age: 22,
+            say: function () {
+                console.log(this); //当前对象  obj
+                setTimeout(()=>{
+                    console.log(this);//  当前对象  obj
+                }, 500);
+            }
+        };
+
+        obj.say();
+
+       
+
+    </script>
+</body>
+</html>

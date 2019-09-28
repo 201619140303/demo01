@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>箭头函数</title>
+</head>
+<body>
+    <script>
+        //无参  一条指令
+    //   let fn=function(){
+    //       console.log("hello");
+    //   }
+    //   fn();
+
+    //   let fn=()=>{
+    //     console.log("hello");
+    //   }
+    // fn();
+   
+   //多条指令
+//    let fn=function(){
+//     console.log("hi");
+//     console.log("jack");
+//    }
+//    fn();
+  
+
+//   let fn=()=>{
+//     console.log("hi");
+//     console.log("jack");
+//   }
+// fn();
+
+//有参  只有一个参数
+// let fn=function(name){
+//     console.log(name);
+// }
+// fn("jack");
+
+// let fn=name=>{
+//     console.log(name);
+// }
+// fn("ja");
+
+//有参，多个参数
+// let fn=function(name,age){
+//     console.log(name,age);
+// }
+// fn("小红",20);
+ 
+//  let fn=(name,age)=>{
+//     console.log(name,age);
+//  }
+//  fn("小红",20);
+
+//带有返回值，一条指令
+// let fn=function(name){
+//     return name;
+// }
+// console.log(fn("lucy")) ;
+
+// let fn=name=>name;
+// console.log(fn("Jackson")) ;
+
+//带有返回值，多条指令
+// let fn=function(name,age){
+//     console.log(name);
+//     return age;
+// }
+// console.log(fn("Tina",20));
+
+// let fn=(name,age)=>{
+//     console.log(name);
+//     return age;
+// }
+// console.log(fn("Tina",50));
+
+//只有一条指令，没有返回值
+// let fn=()=>void console.log("hello");
+// fn();
+
+//特殊情况，有返回值，返回值为一个对象
+// let fn=function(){
+//     return {
+//        name:"lucy",
+//        age:20,
+//        sex:"女"
+//     };
+// }
+// console.log(fn()) ;
+
+let fn=()=>({ name:"lucy", age:30, sex:"女"});
+console.log(fn()) ;
+    </script>
+</body>
+</html>

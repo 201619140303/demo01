@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象扩展</title>
+</head>
+<body>
+    <script>
+    let name="lucy";
+    let age=20;
+    let obj={
+        name,
+        age,
+        say(){
+            console.log("hello");
+        }
+    }
+    // console.log(obj);
+    obj.say();
+
+function fn(x,y){
+return {
+    x,
+    y
+    };
+}
+var Obj=fn("小李",20);
+// console.log(Obj);
+
+
+
+
+    </script>
+</body>
+</html>
